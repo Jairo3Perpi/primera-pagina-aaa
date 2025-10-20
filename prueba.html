@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba 3</title>
+  </head>
+  <body>
+    <h1>Voy a adivinar cosas de ti</h1>
+
+    <p>Nombre: <input type="text" id="nombre"></p>
+    <p>Comida favorita: <input type="text" id="comida"></p>
+    <p>Serie favorita: <input type="text" id="seriefav"></p>
+    <p>Días para tu cumpleaños: <input type="number" id="diasparacumpleanos"></p>
+
+    <button onclick="mostrarSaludo()">Denada</button>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+      function mostrarSaludo() {
+        let nombre = document.getElementById("nombre").value;
+        let comidaFavorita = document.getElementById("comida").value;
+        let serieFavorita = document.getElementById("seriefav").value;
+        let diasCumple = document.getElementById("diasparacumpleanos").value;
+
+        let mensaje = `Hola ${nombre}, tu comida favorita es ${comidaFavorita}, `;
+        mensaje += `tu serie favorita es ${serieFavorita}, `;
+        mensaje += `y faltan ${diasCumple} días para tu cumpleaños.`;
+
+        document.getElementById("resultado").innerText = mensaje;
+      }
+    </script>
+  </body>
+</html>
